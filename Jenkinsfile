@@ -3,13 +3,13 @@
 pipeline {
   agent any
   stages {
- 
+ /*
      stage("Git Clone"){
        steps{
      //   git credentialsId: '', url: 'https://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@github.com/stefanmucha/spring-petclinic'
        }
     }
-
+*/
      stage('Gradle Build') {
       steps{
          sh 'cd ../'
