@@ -9,16 +9,16 @@ pipeline {
      //   git credentialsId: '', url: 'https://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@github.com/stefanmucha/spring-petclinic'
        }
     }
-*/
+
      stage('Gradle Build') {
       steps{
-         sh 'cd ../'
+         //sh 'cd ../'
        //  sh 'cd /test_1'
        //  sh './gradlew build'
           
         }
     }
-
+*/
     
     
     stage('Docker Build') {
