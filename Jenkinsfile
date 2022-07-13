@@ -24,7 +24,7 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-       // sh './gradlew build --no-daemon'
+        sh './gradlew build --no-daemon'
         sh 'docker build --no-cache -t muchast2/spring-petclinic:latest .'
        // sh 'docker stop muchast2/spring-petclinic:latest'
          sh 'docker images --quiet --filter=dangling=true | xargs docker stop'
