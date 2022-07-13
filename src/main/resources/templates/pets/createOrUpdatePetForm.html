@@ -4,7 +4,7 @@
 <body>
 
   <h2>
-    <th:block th:if="${pet['new']}">New </th:block>
+    <th:block th:if="${pet['new']}">New Pet </th:block>
     Pet
   </h2>
   <form th:object="${pet}" class="form-horizontal" method="post">
@@ -27,7 +27,7 @@
       <div class="col-sm-offset-2 col-sm-10">
         <button
           th:with="text=${pet['new']} ? 'Add Pet' : 'Update Pet'"
-          class="btn btn-primary" type="submit" th:text="${text}">Add
+          class="btn btn-primary" type="submit" th:text="${text}">Add a
           Pet</button>
       </div>
     </div>
