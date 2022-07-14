@@ -33,6 +33,7 @@ pipeline {
          sh 'docker build --no-cache -t muchast2/spring-petclinic:latest .'
         sh 'docker run -p 8081:8080 muchast2/spring-petclinic:latest &'
         sh 'docker container prune -f'
+        sh 'docker image prune -f'
        
       }
     }
