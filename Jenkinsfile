@@ -25,11 +25,12 @@ pipeline {
       agent any
       steps {
     //    sh './gradlew build'
-        sh 'docker build --no-cache -t muchast2/spring-petclinic:latest .'
+       
        // sh 'docker stop muchast2/spring-petclinic:latest'
       //   sh 'docker images --quiet | xargs docker stop'
         //sh 'docker images --quiet --filter=dangling=true | xargs --no-run-if-empty docker rmi -f'
         sh 'docker images --quiet | xargs --no-run-if-empty docker rmi -f'
+         sh 'docker build --no-cache -t muchast2/spring-petclinic:latest .'
         sh 'docker run -p 8081:8080 muchast2/spring-petclinic:latest &'
        
       }
